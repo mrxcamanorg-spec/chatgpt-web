@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hena Mobile - Repair Services</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hena Mobile</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-  <div class="logo">Hena Mobile</div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <h1>Hena Mobile</h1>
+  <button onclick="toggleDark()" class="dark-btn">🌙</button>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Fast & Reliable Mobile Repair</h1>
-  <p>Screen Repair • Battery Replacement • Water Damage Fix</p>
-  <button onclick="scrollToContact()">Get Your Phone Fixed Today</button>
+  <img src="logo.png" class="logo">
+  <h2>All Type Mobile Repair & Service Done Here!</h2>
+  <p class="phone">📞 9332227436</p>
 </section>
 
-<section id="services" class="services">
-  <h2>Our Services</h2>
-  <div class="service-box">
-    <div class="card">📱 Screen Repair</div>
-    <div class="card">🔋 Battery Replacement</div>
-    <div class="card">💧 Water Damage Repair</div>
-    <div class="card">⚙️ Software Fix</div>
+<!-- SERVICES -->
+<section>
+  <h2 class="title">Our Services</h2>
+  <div class="services">
+    <div class="card">📱 Phone Unlock</div>
+    <div class="card">⚡ Flashing</div>
+    <div class="card">🔵 Bluetooth Repair</div>
+    <div class="card">💰 2nd Hand Phone Sell</div>
   </div>
 </section>
 
-<section class="cta">
-  <h2>Free Diagnosis Available!</h2>
-  <button onclick="scrollToContact()">Contact Now</button>
+<!-- MAP -->
+<section>
+  <h2 class="title">Our Location</h2>
+  <iframe 
+    src="https://maps.google.com/maps?q=Hazingar%20Marwarikal%20Nelson%20Road&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    class="map">
+  </iframe>
 </section>
 
-<section id="contact" class="contact">
-  <h2>Contact Us</h2>
-  <p>📍 Visit Our Shop Today</p>
-  <p>📞 +123 456 7890</p>
-</section>
-
-<footer>
-  <p>© 2026 Hena Mobile. All Rights Reserved.</p>
-</footer>
+<!-- WHATSAPP -->
+<a href="https://wa.me/919332227436" class="whatsapp" target="_blank">💬</a>
 
 <script src="script.js"></script>
 </body>
