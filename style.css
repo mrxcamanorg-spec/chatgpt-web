@@ -1,33 +1,44 @@
 body {
   margin: 0;
   font-family: Arial;
-  background: #f4f4f4;
-  transition: 0.4s;
-}
-
-/* DARK MODE */
-.dark {
-  background: #111;
   color: white;
+  overflow-x: hidden;
 }
 
-/* 🔥 ANIMATED BANNER */
-.banner {
+/* 🔥 ANIMATED BACKGROUND */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #007bff, #00c6ff, #00ffcc);
+  background-size: 600% 600%;
+  animation: bgMove 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes bgMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* 🌫 GLASS EFFECT */
+.glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: linear-gradient(90deg, #007bff, #00c6ff);
-  color: white;
-  animation: slide 1s ease;
 }
 
-@keyframes slide {
-  from {transform: translateY(-100px);}
-  to {transform: translateY(0);}
-}
-
-/* LOGO AREA */
+/* LOGO */
 .logo-area {
   display: flex;
   align-items: center;
@@ -36,71 +47,64 @@ body {
 
 .logo {
   width: 60px;
-  animation: rotate 5s infinite linear;
+  animation: spin 6s linear infinite;
 }
 
-@keyframes rotate {
-  from {transform: rotate(0deg);}
-  to {transform: rotate(360deg);}
-}
-
-.logo-area h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-.logo-area span {
-  color: yellow;
+@keyframes spin {
+  100% {transform: rotate(360deg);}
 }
 
 /* BUTTONS */
-.header-buttons {
+.buttons {
   display: flex;
   gap: 10px;
 }
 
-.call-btn {
+.call {
   background: red;
-  color: white;
   padding: 10px 15px;
   border-radius: 20px;
+  color: white;
   text-decoration: none;
 }
 
-.dark-btn {
+.dark {
   background: black;
   color: white;
   border: none;
   padding: 10px;
   border-radius: 20px;
-  cursor: pointer;
 }
 
-/* TAGLINE */
-.tagline {
+/* HERO */
+.hero {
   text-align: center;
-  padding: 20px;
-  font-size: 20px;
+}
+
+/* 📱 SLIDER */
+.slider {
+  text-align: center;
+}
+
+.slider img {
+  width: 250px;
+  border-radius: 10px;
+  transition: 0.5s;
 }
 
 /* SERVICES */
 .services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  gap: 15px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
   text-align: center;
   border-radius: 10px;
   transition: 0.3s;
-}
-
-.dark .card {
-  background: #222;
 }
 
 .card:hover {
@@ -108,12 +112,10 @@ body {
 }
 
 /* MAP */
-.map {
-  width: 90%;
-  height: 300px;
-  display: block;
-  margin: auto;
-  border: none;
+iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
 }
 
 /* WHATSAPP */
@@ -130,6 +132,10 @@ body {
 }
 
 @keyframes bounce {
-  0%,100% {transform: translateY(0);}
   50% {transform: translateY(-10px);}
+}
+
+/* 🌙 DARK MODE */
+.dark-mode {
+  background: #111;
 }
