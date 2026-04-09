@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #0a66c2;
+  color: white;
+}
+
+header .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #0a66c2, #4da3ff);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: #ff3b3b;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.service-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta {
+  background: #ff3b3b;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.cta button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: #ff3b3b;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contact {
+  padding: 40px;
+  text-align: center;
+}
+
+footer {
+  background: #0a66c2;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
