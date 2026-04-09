@@ -1,67 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hena Mobile</title>
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hena Mobile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <div class="bg-lines"></div>
 
-<!-- ANIMATED BACKGROUND -->
-<div class="background"></div>
+  <header class="topbar glass">
+    <div class="brand">
+      <div class="logo-wrap">
+        <img src="logo.png" alt="Hena Mobile Logo" class="logo" onerror="this.style.display='none';document.querySelector('.logo-fallback').style.display='flex';">
+        <div class="logo-fallback" style="display:none;">HM</div>
+      </div>
+      <div class="brand-text">
+        <h1>Hena Mobile</h1>
+        <p>Mobile Repair & Service</p>
+      </div>
+    </div>
 
-<!-- HEADER -->
-<header class="glass">
-  <div class="logo-area">
-    <img src="logo.png" class="logo">
-    <h1>Hena <span>Mobile</span></h1>
-  </div>
+    <div class="top-actions">
+      <a href="tel:9332227436" class="btn btn-call">📞 Call Now</a>
+      <button class="btn btn-mode" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </header>
 
-  <div class="buttons">
-    <a href="tel:9332227436" class="call">📞 Call</a>
-    <button onclick="toggleDark()" class="dark">🌙</button>
-  </div>
-</header>
+  <main class="container">
+    <section class="hero glass">
+      <div class="hero-content">
+        <span class="badge">Fast • Trusted • Affordable</span>
+        <h2>Fast & Reliable Mobile Repair</h2>
+        <p>All Type Mobile Repair & Service Done Here</p>
 
-<!-- HERO -->
-<section class="hero glass">
-  <h2>Fast & Reliable Mobile Repair</h2>
-  <p>All Type Mobile Repair & Service Done Here</p>
-</section>
+        <div class="hero-buttons">
+          <a href="tel:9332227436" class="btn btn-call big">📞 Call 9332227436</a>
+          <a href="https://wa.me/919332227436" target="_blank" class="btn btn-whatsapp big">💬 WhatsApp</a>
+        </div>
+      </div>
 
-<!-- 📱 IMAGE SLIDER -->
-<section class="slider glass">
-  <img id="slide" src="phone1.jpg">
-</section>
+      <div class="hero-visual">
+        <img src="banner.png" alt="Hena Mobile Banner" class="hero-banner"
+             onerror="this.style.display='none';document.querySelector('.hero-placeholder').style.display='flex';">
+        <div class="hero-placeholder" style="display:none;">
+          <div class="phone-card">
+            <div class="phone-glow"></div>
+            <span>Hena Mobile</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- SERVICES -->
-<section class="glass">
-  <h2>Our Services</h2>
+    <section class="section glass">
+      <h3 class="section-title">Our Services</h3>
+      <div class="services">
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h4>Phone Unlock</h4>
+          <p>Unlock your phone safely and quickly.</p>
+        </div>
 
-  <div class="services">
-    <div class="card">📱 Phone Unlock</div>
-    <div class="card">⚡ Flashing</div>
-    <div class="card">🔵 Bluetooth Repair</div>
-    <div class="card">💰 2nd Hand Phone Sell</div>
-  </div>
-</section>
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h4>Flashing</h4>
+          <p>Software flashing and system restore.</p>
+        </div>
 
-<!-- MAP -->
-<section class="glass">
-  <h2>Our Location</h2>
-  <iframe 
-    src="https://maps.google.com/maps?q=Hazingar%20Marwarikal%20Nelson%20Road&t=&z=13&ie=UTF8&iwloc=&output=embed">
-  </iframe>
-</section>
+        <div class="service-card">
+          <div class="service-icon">🔵</div>
+          <h4>Bluetooth Repair</h4>
+          <p>Fix pairing, sound and connection issues.</p>
+        </div>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/919332227436" class="whatsapp">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH90h_h_xrOrSry_e0cEKf4v2_pv2Zbg0hYQ&s">
-</a>
+        <div class="service-card">
+          <div class="service-icon">📲</div>
+          <h4>2nd Hand Phone Sell</h4>
+          <p>Good quality used phones at fair price.</p>
+        </div>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <section class="section glass">
+      <h3 class="section-title">Find Us</h3>
+      <div class="map-wrap">
+        <iframe
+          src="https://maps.google.com/maps?q=Hazingar%20Marwarikal%20Nelson%20Road&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map">
+        </iframe>
+      </div>
+      <p class="address">Hazingar Marwarikal, Nelson Road</p>
+    </section>
+  </main>
+
+  <a href="https://wa.me/919332227436" target="_blank" class="floating-whatsapp" aria-label="WhatsApp Chat">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH90h_h_xrOrSry_e0cEKf4v2_pv2Zbg0hYQ&s" alt="WhatsApp Icon"
+         onerror="this.style.display='none';">
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
